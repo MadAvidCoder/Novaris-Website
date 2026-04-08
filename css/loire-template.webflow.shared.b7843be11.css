@@ -2,6 +2,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -2914,6 +2915,7 @@ blockquote {
   display: flex;
   position: relative;
   overflow: hidden;
+  margin-right: 1em;
 }
 
 .hamburger-menu._2 {
@@ -3029,6 +3031,7 @@ blockquote {
   font-family: var(--font--primary-font);
   font-size: var(--font--h5);
   font-weight: var(--font-weight--600);
+  margin-left: 1em;
 }
 
 .logo-flex {
@@ -3200,6 +3203,7 @@ blockquote {
   align-items: center;
   display: flex;
   position: relative;
+  margin-right: 0.47em;
 }
 
 .globe {
@@ -3207,6 +3211,8 @@ blockquote {
   width: 24px;
   position: relative;
   top: 2px;
+  margin-left: 0.52em;
+  margin-right: 0.1em;
 }
 
 .trigger {
@@ -4889,6 +4895,10 @@ blockquote {
 }
 
 #w-node-_65c5b745-1429-2408-d8e6-3cf8f68cf928-93f1f32a {
+  align-self: start;
+}
+
+#w-node-_65e8b745-1962-2408-d8e6-3cf8f68cf928-93f1f32a {
   align-self: start;
 }
 
