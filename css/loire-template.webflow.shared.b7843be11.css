@@ -3462,6 +3462,19 @@ blockquote {
   letter-spacing: -.2px;
 }
 
+.page-title.flex.thirdimp {
+  opacity: .7 !important;
+  font-size: var(--font--h5);
+  font-weight: var(--font-weight--500);
+  letter-spacing: -.2px;
+}
+
+.page-title.flex.thirdbig {
+  font-size: var(--font--h4);
+  font-weight: var(--font-weight--700);
+  letter-spacing: -.2px;
+}
+
 .small {
   opacity: .65;
   font-size: var(--font--h4);
