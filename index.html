@@ -693,56 +693,56 @@
     let targetTiltX = 0;
     let targetTiltY = 0;
 
-    // track scroll (lightweight)
+    let inertiaX = 0;
+    let inertiaY = 0;
+
     window.addEventListener('scroll', () => {
         scrollY = window.scrollY;
     }, {passive: true});
 
-    // track mouse inside window
     window.addEventListener('mousemove', (e) => {
         mouseX = (e.clientX / window.innerWidth) - 0.5;
         mouseY = (e.clientY / window.innerHeight) - 0.5;
 
-        targetTiltX = mouseY * -6;
-        targetTiltY = mouseX * 6;
-    });
+        targetTiltX = mouseY * -4;
+        targetTiltY = mouseX * 4;
+    }, {passive: true});
 
-    // animation loop (smooth + efficient)
     function animate() {
-        const blurAmount = Math.min(scrollY * 0.023, 4);
+        // ===== SMOOTH MOUSE =====
+        targetX += (mouseX - targetX) * 0.08;
+        targetY += (mouseY - targetY) * 0.08;
+
+        const mouseOffsetX = targetX * 12;
+        const mouseOffsetY = targetY * 12;
+
+        // ===== SCROLL (interpolated) =====
+        const smoothScroll = scrollY * 0.85;
+
+        const bgScroll = smoothScroll * 0.25;
+        const botScroll = smoothScroll * 0.55;
+
+        // ===== TILT =====
+        targetTiltX = mouseY * -4;
+        targetTiltY = mouseX * 4;
+
+        inertiaX += (targetTiltX - inertiaX) * 0.08;
+        inertiaY += (targetTiltY - inertiaY) * 0.08;
+
+        // ===== SINGLE DOM WRITE PER ELEMENT =====
+        heroBg.style.transform =
+            `translate3d(${mouseOffsetX}px, ${mouseOffsetY + bgScroll}px, 0) scale(1.1)`;
+
+        const blurAmount = Math.min(scrollY * 0.015, 3);
         heroBg.style.filter = `blur(${blurAmount}px)`;
 
-        // smooth mouse easing (lag)
-        targetX += (mouseX - targetX) * 0.06;
-        targetY += (mouseY - targetY) * 0.06;
+        bot.style.transform =
+            `translate3d(${mouseOffsetX * 0.4}px, ${mouseOffsetY * 0.4 + botScroll}px, 0)`;
 
-        // subtle mouse influence (very light)
-        const mouseOffsetX = targetX * 16;
-        const mouseOffsetY = targetY * 16;
-
-        // scroll parallax (main motion)
-        const bgScroll = scrollY * 0.31;
-        const botScroll = scrollY * 0.58;
-
-        // background: strongest depth layer
-        heroBg.style.transform = `
-        translate(${mouseOffsetX}px, ${mouseOffsetY + bgScroll}px)
-        scale(1.1)
-    `;
-
-        // bottom section: medium depth
-        bot.style.transform = `
-        translate(${mouseOffsetX * 0.4}px, ${mouseOffsetY * 0.4 + botScroll}px)
-    `;
-
-        // tiltX += (targetTiltX - tiltX) * 0.08;
-        // tiltY += (targetTiltY - tiltY) * 0.08;
-        //
-        // tilt.style.transform = `
-        //     perspective(1000px)
-        //     rotateX(${tiltX}deg)
-        //     rotateY(${tiltY}deg)
-        // `;
+        tilt.style.transform =
+            `perspective(1000px)
+         rotateX(${inertiaX}deg)
+         rotateY(${inertiaY}deg)`;
 
         requestAnimationFrame(animate);
     }

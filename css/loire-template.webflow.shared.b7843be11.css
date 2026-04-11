@@ -3107,7 +3107,7 @@ blockquote {
   background-size: cover;
   background-position: center;
   z-index: 0;
-  transform: scale(1.1);
+  transform: translateZ(0) scale(1.1);
   will-change: transform;
   filter: contrast(1.1) saturate(1.1);
 }
@@ -3128,6 +3128,7 @@ blockquote {
 .container-bottom {
   position: relative;
   will-change: transform;
+  transform: translateZ(0);
   z-index: 2;
 }
 
@@ -3137,6 +3138,7 @@ blockquote {
   height: 100%;
   transform-style: preserve-3d;
   will-change: transform;
+  transform: translateZ(0);
 }
 
 .heading-main {
