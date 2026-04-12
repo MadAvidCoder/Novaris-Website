@@ -2790,7 +2790,7 @@ blockquote {
   display: block;
 }
 
-.wrok-card-wrapper {
+.work-card-wrapper {
   width: 100%;
 }
 
@@ -3241,9 +3241,9 @@ blockquote {
   position: absolute;
 }
 
-.social-circle.twitter {
-  background-color: #009eff;
-}
+/*.social-circle.twitter {*/
+/*  background-color: #009eff;*/
+/*}*/
 
 .social-circle.linkdin {
   background-color: #0a66c2;
@@ -3282,7 +3282,7 @@ blockquote {
   height: 0;
 }
 
-.image-bacgkround {
+.image-background {
   z-index: 1;
   object-fit: cover;
   width: 100%;
@@ -3371,11 +3371,31 @@ blockquote {
   height: 80px;
 }
 
+.section-photo {
+  height: 200vh;
+  position: relative;
+}
+
 .image-animation {
   width: 100%;
-  height: 100%;
+  position: sticky;
+  top: 0;
+  /*overflow: hidden;*/
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.section.gray {
   position: relative;
-  overflow: hidden;
+  z-index: 20;
+  margin-top: -100vh;
+  transition: transform 0.3s ease;
+}
+
+.image-animation img {
+  object-fit: cover;
 }
 
 .section-photo {
@@ -3457,7 +3477,7 @@ blockquote {
   display: flex;
 }
 
-.project-small-title.biger {
+.project-small-title.bigger {
   font-size: var(--font--h4);
   line-height: 34px;
   font-weight: var(--font-weight--500);
@@ -3760,7 +3780,7 @@ blockquote {
   position: relative;
 }
 
-.badge-paragraph.biger {
+.badge-paragraph.bigger {
   color: #fff;
   font-size: 15px;
   font-weight: 700;
@@ -4131,7 +4151,7 @@ blockquote {
     display: none;
   }
 
-  .project-small-title.biger {
+  .project-small-title.bigger {
     line-height: 30px;
   }
 
@@ -4460,7 +4480,7 @@ blockquote {
     display: none;
   }
 
-  .project-small-title.biger {
+  .project-small-title.bigger {
     font-size: var(--font--h4);
   }
 
