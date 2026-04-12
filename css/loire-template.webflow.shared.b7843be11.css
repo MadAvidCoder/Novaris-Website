@@ -234,7 +234,7 @@ body {
   background-color: #fff;
   min-height: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   line-height: 20px;
 }
@@ -664,7 +664,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-file-upload-error-msg {
-  color: #ea384c;
+  color: #e83b4d;
   padding: 2px 0;
   display: inline-block;
 }
@@ -2070,7 +2070,7 @@ textarea.w-input, textarea.w-select {
   --font--h5: 1rem;
   --font--h6: .8rem;
   --line-height--paragraph-line-height: 1.3;
-  --colors--second-color: #f5f5f5;
+  --colors--second-color: #e83b4d; /* #f5f5f5; */
   --button--button-color: white;
   --font-weight--400: 400;
   --colors--first-color: black;
@@ -2097,7 +2097,7 @@ textarea.w-input, textarea.w-select {
   --page-container--round-corners: .6rem;
   --page-margin--divider-extra-small: 10px;
   --page-margin--divider-x-large: 150px;
-  --font--second-font: "Playfair Display", sans-serif;
+  --font--second-font: "Inter", sans-serif;
   --font--third-font: Caveat, sans-serif;
   --font--work-title: 1.2rem;
   --section--padding-top-bottom: 250px;
@@ -2837,7 +2837,7 @@ blockquote {
 
 .button-line-overlay {
   z-index: 1;
-  background-color: var(--button--button-color);
+  background-color: #e83b4d;/*var(--button--button-color);*/
   width: 100%;
   height: 1px;
   position: absolute;
@@ -3057,6 +3057,11 @@ blockquote {
   margin-top: 0;
   margin-bottom: 0;
 }
+.title-smaller {
+  font-size: calc(var(--main-title) * 0.8);
+  font-weight: var(--font-weight--800);
+}
+
 
 .hero-flex {
   grid-row-gap: 15px;
@@ -3259,7 +3264,7 @@ blockquote {
   align-items: center;
   display: flex;
   position: relative;
-  margin-right: 0.47em;
+  margin-right: 0.52em;
 }
 
 .globe {
@@ -3594,7 +3599,7 @@ blockquote {
 }
 
 .line-absolute {
-  background-color: var(--colors--fourth-color);
+  background-color: #e83b4d; /*var(--colors--fourth-color)*/;
   width: 100%;
   height: 1px;
   position: absolute;
