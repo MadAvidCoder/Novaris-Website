@@ -18,6 +18,7 @@
     <link href="images/novaris_alt.svg" rel="shortcut icon" type="image/x-icon" />
     <link href="images/app-icon.png" rel="apple-touch-icon" />
     <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 </head>
 
 <body>
@@ -67,35 +68,48 @@
         </div>
         <section class="section with-utility">
             <div class="container">
+
                 <div class="licensing-content">
-                    <p class="subhead">All graphical assets in this template are licensed for personal and commercial
-                        use. If you&#x27;d like to use a specific asset, please check the license below.</p>
-                    <div class="margin-50">
-                        <h2 class="licensing-title">Image — <a href="https://www.lummi.ai/" target="_blank"
-                                class="licensing-link">LUMMI</a></h2>
-                        <div class="margin-30">
-                            <div class="licensing-grid"><img sizes="(max-width: 1808px) 100vw, 1808px"
-                                    srcset="images/photo-37-p-500.webp 500w, images/photo-37-p-800.webp 800w, images/photo-37-p-1080.webp 1080w, images/photo-37-p-1600.webp 1600w, images/photo-37.webp 1808w"
-                                    alt="" src="images/photo-37.webp" loading="lazy" /><img
-                                    sizes="(max-width: 1992px) 100vw, 1992px"
-                                    srcset="images/photo-36-p-500.webp 500w, images/photo-36-p-800.webp 800w, images/photo-36-p-1080.webp 1080w, images/photo-36-p-1600.webp 1600w, images/photo-36.webp 1992w"
-                                    alt="" src="images/photo-36.webp" loading="lazy" /><img
-                                    sizes="(max-width: 1808px) 100vw, 1808px"
-                                    srcset="images/photo-38-p-500.webp 500w, images/photo-38-p-800.webp 800w, images/photo-38-p-1080.webp 1080w, images/photo-38-p-1600.webp 1600w, images/photo-38.webp 1808w"
-                                    alt="" src="images/photo-38.webp" loading="lazy" /><img
-                                    sizes="(max-width: 2400px) 100vw, 2400px"
-                                    srcset="images/photo-1-p-500.webp 500w, images/photo-1-p-800.webp 800w, images/photo-1-p-1080.webp 1080w, images/photo-1-p-1600.webp 1600w, images/photo-1-p-2000.webp 2000w, images/photo-1.webp 2400w"
-                                    alt="" src="images/photo-1.webp" loading="lazy" /></div>
-                        </div>
+
+                    <div class="gallery-header">
+                        <p class="subhead">Our Journey</p>
+                        <h1 class="page-title">Gallery</h1>
                     </div>
-                    <div class="margin-50">
-                        <h2 class="licensing-title">Font — <a href="https://fonts.google.com/specimen/Geist"
-                                target="_blank" class="licensing-link">Inter</a></h2>
-                        <div class="margin-30">
-                            <h2>I&#x27;m Inter, happy to meet you!</h2>
-                        </div>
+
+                    <div class="gallery">
+
+                        <a class="heroimg glightbox" href="images/gallery1.JPG">
+                            <img src="images/gallery1.JPG">
+                        </a>
+
+                        <a class="landscape narrower glightbox" href="images/gallery2.JPG"><img src="images/gallery2.JPG"></a>
+                        <a class="portrait wider glightbox" href="images/gallery3.JPG"><img src="images/gallery3.JPG"></a>
+
+                        <a class="portrait right glightbox" href="images/gallery4.JPG"><img src="images/gallery4.JPG"></a>
+                        <a class="landscape glightbox" href="images/gallery5.JPG"><img src="images/gallery5.JPG"></a>
+
+                        <a class="square glightbox" href="images/gallery6.JPG"><img src="images/gallery6.JPG"></a>
+                        <a class="square glightbox" href="images/gallery7.JPG"><img src="images/gallery7.JPG"></a>
+                        <a class="square glightbox" href="images/gallery8.JPG"><img src="images/gallery8.JPG"></a>
+
+                        <a class="wide glightbox" href="images/gallery9.JPG"><img src="images/gallery9.JPG"></a>
+
+                        <a class="portrait narrower glightbox" href="images/gallery10.JPG"><img src="images/gallery10.JPG"></a>
+                        <a class="landscape wider glightbox" href="images/gallery11.JPG"><img src="images/gallery11.JPG"></a>
+
+                        <a class="square glightbox" href="images/gallery12.JPG"><img src="images/gallery12.JPG"></a>
+                        <a class="square mid-right glightbox" href="images/gallery13.JPG"><img src="images/gallery13.JPG"></a>
+                        <a class="square far-right glightbox" href="images/gallery14.JPG"><img src="images/gallery14.JPG"></a>
+
+                        <a class="landscape glightbox" href="images/gallery15.JPG"><img src="images/gallery15.JPG"></a>
+                        <a class="portrait glightbox" href="images/gallery16.JPG"><img src="images/gallery16.JPG"></a>
+
+                        <a class="wide glightbox" href="images/gallery17.JPG"><img src="images/gallery17.JPG"></a>
+
                     </div>
+
                 </div>
+
             </div>
         </section>
     </div>
@@ -217,6 +231,33 @@
     <script src="js/webflow.schunk.e0c428ff9737f919.js" type="text/javascript"></script>
     <script src="js/webflow.schunk.8db72f311fe208e7.js" type="text/javascript"></script>
     <script src="js/webflow-script.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <script>
+        const lightbox = GLightbox({
+            touchNavigation: true,
+            loop: true,
+            zoomable: true,
+            draggable: true,
+            openEffect: 'zoom',
+            closeEffect: 'fade'
+        });
+    </script>
+
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll(".gallery a").forEach((el, i) => {
+            el.style.transitionDelay = (i * 0.05) + "s";
+            observer.observe(el);
+        });
+    </script>
 </body>
 
 </html>
