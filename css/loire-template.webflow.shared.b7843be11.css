@@ -3500,12 +3500,21 @@ blockquote {
 
 .image-background {
   z-index: 1;
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   height: 100%;
   position: absolute;
   inset: 0%;
   overflow: clip;
+
+  top: 0;
+  display: flex;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
 }
 
 .work-card {
@@ -3601,8 +3610,9 @@ blockquote {
   position: sticky;
   top: 0;
   /*overflow: hidden;*/
-  display: flex;
-  height: 100vh;
+  /* display: flex; */
+  height: auto;
+  display: block;
   align-items: center;
   justify-content: center;
 }
@@ -3612,10 +3622,6 @@ blockquote {
   z-index: 20;
   margin-top: -100vh;
   transition: transform 0.3s ease;
-}
-
-.image-animation img {
-  object-fit: cover;
 }
 
 .section-photo {
@@ -5500,4 +5506,28 @@ blockquote {
     grid-column: 1;
   }
 
+}
+
+
+@media (max-width: 767px) {
+  .section-photo {
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* .image-animation {
+    position: relative;
+    top: auto;
+  } */
+
+  .image-background {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .section.gray {
+    margin-top: -120px;
+  }
 }
