@@ -5546,3 +5546,12 @@ blockquote {
     margin-top: -120px;
   }
 }
+
+@media (max-width: 767px) {
+    .title-1.novaris-font {
+      font-size: 22vw;
+    }
+    .title-1.red-title {
+      font-size: 18vw;
+    }
+}
