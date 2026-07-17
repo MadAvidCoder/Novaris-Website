@@ -5555,3 +5555,61 @@ blockquote {
       font-size: 18vw;
     }
 }
+
+/* @media (max-width: 767px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .gallery a {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+    }
+} */
+
+
+@media (max-width: 767px) {
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .gallery a {
+    display: block;
+    width: 100%;
+    aspect-ratio: auto !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .gallery img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .heroimg,
+  .wide,
+  .portrait,
+  .landscape,
+  .square,
+  .wider,
+  .narrower,
+  .right,
+  .mid-right,
+  .far-right {
+    width: 100%;
+  }
+}
