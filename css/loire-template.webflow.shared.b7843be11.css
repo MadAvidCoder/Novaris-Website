@@ -5910,8 +5910,6 @@ blockquote {
 }
 
 
-/* Close button */
-
 .partner-modal-close {
     position: absolute;
     top: 20px;
@@ -5943,8 +5941,6 @@ blockquote {
 }
 
 
-/* Logo */
-
 .partner-modal-logo-wrapper {
     display: flex;
     align-items: center;
@@ -5968,8 +5964,6 @@ blockquote {
     object-fit: contain;
 }
 
-
-/* Text */
 
 .partner-modal-label {
     margin-bottom: 10px;
@@ -6001,8 +5995,6 @@ blockquote {
     color: rgba(255, 255, 255, 0.72);
 }
 
-
-/* Website button */
 
 .partner-modal-link {
     display: inline-flex;
@@ -6061,4 +6053,77 @@ blockquote {
   .no-mobile {
     display: none !important;
   }
+}
+
+@media (max-width: 600px) {
+    .logo-marquee-wrapper {
+        height: 115vh;
+    }
+
+    .logo-marquee {
+        height: 75vh;
+        min-height: 500px;
+
+        justify-content: space-evenly;
+        gap: 0;
+
+        padding: 50px 0;
+
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+        );
+
+        mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+        );
+    }
+
+    .track {
+        gap: 12px;
+    }
+
+    .logo-card {
+        flex: 0 0 160px;
+        width: 160px;
+        height: 84px;
+
+        border-radius: 15px;
+
+        transform:
+            perspective(700px)
+            rotateZ(var(--r))
+            rotateX(3deg)
+            rotateY(-2deg);
+    }
+
+    .logo-card img {
+        max-width: 65%;
+        max-height: 32px;
+    }
+
+    .track.one {
+        animation-duration: 24s;
+    }
+
+    .track.two {
+        animation-duration: 21s;
+    }
+
+    .track.three {
+        animation-duration: 28s;
+    }
+
+    .card1 { --r: -1deg; }
+    .card2 { --r: 0.7deg; }
+    .card3 { --r: -0.6deg; }
+    .card4 { --r: 0.9deg; }
+    .card5 { --r: -0.8deg; }
 }
