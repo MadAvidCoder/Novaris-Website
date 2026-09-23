@@ -6086,6 +6086,10 @@ blockquote {
             transparent 100%
         );
     }
+    .logo-marquee h2 {
+      margin-bottom: 40px;
+      align-self: center;
+    }
 
     .track {
         gap: 12px;
