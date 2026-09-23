@@ -6056,3 +6056,9 @@ blockquote {
     }
 
 }
+
+@media (max-width: 768px) {
+  .no-mobile {
+    display: none !important;
+  }
+}
